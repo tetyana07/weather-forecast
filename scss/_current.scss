@@ -1,0 +1,228 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; 
+  padding-top: 120px; 
+  overflow: hidden;   
+}
+
+.hero__bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, $gradient-start, $gradient-end);
+  z-index: 1;
+}
+
+.hero__clouds {
+  position: absolute;
+  inset: 0;
+  background: url('../images/image-removebg-preview (5).png') center/cover no-repeat;
+  filter: blur(8px);
+  opacity: 0.52;
+  z-index: 2;
+}
+
+.hero__content {
+  z-index: 3;
+  text-align: center;
+}
+
+.current {
+  position: relative;
+}
+
+.current-weather__temperature {
+  font-size: 200px;
+  position: relative;
+  display: inline-block;
+  color: $temp-dark;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: url('../images/photo_2026-02-27_21-31-07-removebg-preview.png') no-repeat center/contain;
+    bottom: -20px;
+    right: -20px;
+    pointer-events: none;
+  }
+}
+
+.current-weather__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;         
+  margin-top: 2px; 
+  padding-top: 20px;
+  padding-bottom: 30px;
+  line-height: 1.6;   
+}
+
+.current-weather__city {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.8;
+}
+
+.current-weather__feels,
+.current-weather__condition {
+  font-size: 24px;
+  opacity: 0.92;
+  margin: 0;          
+}
+
+
+.params-panel {
+  background: $panel-bg;
+  backdrop-filter: $blur-strong;
+  border-radius: 60px;
+  border: 3px solid rgba(8, 47, 114, 0.914);
+  padding: 20px 25px;
+  display: inline-flex;
+  gap: 50px;
+  box-shadow: 0 28px 80px rgba(0,0,0,0.3);
+}
+
+
+.params-panel__item:nth-child(1) .params-panel__icon {
+  background: url('../images/image-removebg-preview (6).png') center/contain no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.params-panel__item:nth-child(2) .params-panel__icon {
+  background: url('../images/image-removebg-preview (7).png') center/contain no-repeat;
+  width: 60px;
+  height: 60px;
+  position: relative; 
+  top: -5px;          
+}
+
+.params-panel__item:nth-child(3) .params-panel__icon {
+  background: url('../images/image-removebg-preview (8).png') center/contain no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.params-panel__icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 18px;
+  fill: $text-icon;
+  opacity: 0.95;
+}
+
+
+.params-panel__value {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+  color: #1C2D99;
+  margin-bottom: 10px;
+}
+
+
+.params-panel__label {
+  font-size: 15px;
+  text-align: center;
+  color: #1C2D99;
+  opacity: 0.8;
+  font-weight: 200;
+  
+}
+.temp-graph {
+  margin-top: 60px;
+  width: 520px;
+}
+
+
+.temp-graph__line {
+  position: relative;
+  height: 120px;
+
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      90deg,
+      #ff4fd8 0%,
+      #ff4fd8 25%,
+      #ff7a5c 45%,
+      #ffa534 60%,
+      #ffd84d 75%,
+      #ffe95c 100%
+    );
+
+   
+    clip-path: polygon(
+      0% 90%,
+      12% 65%,
+      25% 72%,
+      38% 60%,
+      50% 25%,
+      60% 55%,
+      70% 25%,
+      80% 55%,
+      90% 50%,
+      100% 60%,
+      100% 100%,
+      0% 100%
+    );
+
+    border-radius: 4px;
+  }
+}
+
+
+.temp-graph__dot {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+
+ 
+  width: 6px;
+  height: 6px;
+  background: #401786;
+  border-radius: 50%;
+
+ 
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+
+    width: 1px;
+    height: 25px; 
+    background: repeating-linear-gradient(
+      to bottom,
+      #000 0 3px,
+      transparent 3px 6px
+    );
+    opacity: 0.5;
+  }
+}
+
+
+.temp-graph__hours {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #1C2D99;
+  opacity: 0.85;
+
+  span.active {
+    font-weight: 700;
+  }
+}

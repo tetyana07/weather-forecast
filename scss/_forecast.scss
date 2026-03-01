@@ -1,0 +1,80 @@
+.forecast-page {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+
+  background: linear-gradient(to bottom, $gradient-end,$gradient-start);
+}
+
+.forecast-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* хмари */
+.forecast-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url('../images/image-removebg-preview (5).png') center/cover no-repeat;
+  filter: blur(8px);
+  opacity: 0.52;
+
+  z-index: 0;
+}
+
+/* щоб контент був зверху */
+.forecast-layout {
+  position: relative;
+  z-index: 2;
+}
+
+
+.forecast-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: rgb(0, 0, 0);
+}
+
+/* DAYS */
+
+.forecast-day {
+  display: grid;
+  grid-template-columns: 140px 60px 1fr auto;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 20px;
+  margin-bottom: 14px;
+
+  border-radius: 40px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(20px);
+}
+
+.forecast-day img {
+  width: 50px;
+}
+
+.temps {
+  font-size: 14px;
+}
+
+/* HOURS */
+
+.hour-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 25px;
+  margin-bottom: 15px;
+
+  border-radius: 40px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(20px);
+}
+
+.hour-row img {
+  width: 50px;
+}

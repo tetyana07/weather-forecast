@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій синоптик</title>
+  <link rel="stylesheet" href="scss/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <div class="header__logo">Мій синоптик</div>
+    <nav class="header__nav">
+      <a href="#" class="header__link">Головнa</a>
+      <a href="#" class="header__link">Прогноз</a>
+      <a href="#" class="header__link">Залишити відгук</a>
+    </nav>
+  </div>
+</header>
+
+<main class="hero">
+  <div class="hero__bg-gradient"></div>
+  <div class="hero__clouds"></div>
+
+ 
+  <div class="hero__content">
+
+    <div class="search-bar">
+      <input type="text" class="search-bar__input" placeholder="Введіть назву населеного пункту..." />
+      <button class="search-bar__btn">
+        <img src="images/завантаження (2).png" class="search-bar__icon" />
+      </button>
+    </div>
+
+    <div class="current-weather__temperature">
+      8<span class="current-weather__degree">°</span>
+    </div>
+
+    <div class="current-weather__details">
+      <h2 class="current-weather__city">Ужгород, Україна</h2>
+      <p class="current-weather__feels">Відчувається як 4°</p>
+      <p class="current-weather__condition">Хмарно з проясненнями</p>
+    </div>
+
+    <div class="params-panel">
+      <div class="params-panel__item">
+        <svg class="params-panel__icon"></svg>
+        <span class="params-panel__value">30%</span>
+        <span class="params-panel__label">Опади</span>
+      </div>
+      <div class="params-panel__item">
+        <svg class="params-panel__icon"></svg>
+        <span class="params-panel__value">15%</span>
+        <span class="params-panel__label">Вологість</span>
+      </div>
+      <div class="params-panel__item">
+        <svg class="params-panel__icon"></svg>
+        <span class="params-panel__value">12 км/год</span>
+        <span class="params-panel__label">Швидкість вітру</span>
+      </div>
+    </div>
+
+  
+    <div class="temp-graph">
+      <svg viewBox="0 0 520 140" class="temp-graph__svg">
+        <defs>
+          <linearGradient id="tempGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ff4fd8"/>
+            <stop offset="40%" stop-color="#ff7a5c"/>
+            <stop offset="70%" stop-color="#ffd84d"/>
+            <stop offset="100%" stop-color="#ffe95c"/>
+          </linearGradient>
+        </defs>
+
+        <polyline
+          points="0,120 60,90 120,100 180,80 240,85 300,70 360,30 420,70 480,60 520,70"
+          fill="none"
+          stroke="url(#tempGradient)"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
+
+<circle cx="260" cy="78" r="4" fill="#000"/>
+<line x1="260" y1="82" x2="260" y2="195"
+      stroke="#000"
+      stroke-width="1"
+      stroke-dasharray="4 4" />
+      </svg>
+
+      <div class="temp-graph__hours">
+        <span>0:00</span>
+        <span>3:00</span>
+        <span>6:00</span>
+        <span>12:00</span>
+        <span>15:00</span>
+        <span>18:00</span>
+        <span>21:00</span>
+      </div>
+    </div>
+
+  </div> 
+  
+</main>
+<section class="forecast-page">
+
+  <div class="container forecast-layout">
+
+    
+    <div class="forecast-left">
+
+      <h2 class="forecast-title">Прогноз на 7 днів:</h2>
+
+      <div class="forecast-day">
+        <span>Понеділок</span>
+        <img src="images/rain.png">
+        <span>Дощ</span>
+        <div class="temps">min 5°<br>max 7°</div>
+      </div>
+
+      <div class="forecast-day">
+        <span>Вівторок</span>
+        <img src="images/snow.png">
+        <span>Сніг</span>
+        <div class="temps">min -5°<br>max 0°</div>
+      </div>
+
+      <div class="forecast-day">
+        <span>Середа</span>
+        <img src="images/cloudy.png">
+        <span>Хмарно</span>
+        <div class="temps">min 8°<br>max 10°</div>
+      </div>
+
+      <div class="forecast-day">
+        <span>Четвер</span>
+        <img src="images/cloudy1.png">
+        <span>Хмарно</span>
+        <div class="temps">min 11°<br>max 13°</div>
+      </div>
+
+      <div class="forecast-day">
+        <span>Пʼятниця</span>
+        <img src="images/storm.png">
+        <span>Гроза</span>
+        <div class="temps">min 2°<br>max 4°</div>
+      </div>
+
+      <div class="forecast-day">
+        <span>Субота</span>
+        <img src="images/rain.png">
+        <span>Дощ</span>
+        <div class="temps">min 5°<br>max 9°</div>
+      </div>
+
+      <div class="forecast-day">
+        <span>Неділя</span>
+        <img src="images/cloudy.png">
+        <span>Хмарно</span>
+        <div class="temps">min 9°<br>max 15°</div>
+      </div>
+
+    </div>
+
+
+ 
+    <div class="forecast-right">
+
+      <h2 class="forecast-title">Погодинно на сьогодні:</h2>
+
+      <div class="hour-row"><span>08:00</span><img src="images/cloudy.png"></div>
+      <div class="hour-row"><span>09:00</span><img src="images/cloudy.png"></div>
+      <div class="hour-row"><span>10:00</span><img src="images/cloudy.png"></div>
+      <div class="hour-row"><span>11:00</span><img src="images/rain.png"></div>
+      <div class="hour-row"><span>12:00</span><img src="images/rain.png"></div>
+      <div class="hour-row"><span>13:00</span><img src="images/rain.png"></div>
+      <div class="hour-row"><span>14:00</span><img src="images/cloudy1.png"></div>
+
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  background: rgba(21, 96, 167, 0.419);
+  backdrop-filter: $blur-light;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: $accent-blue;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 48px;
+  }
+
+  &__link {
+    color: $text-white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+
+    &:hover {
+      color: $accent-blue;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+$panel-bg: rgba(255,255,255,0.14);
+$blur-strong: blur(15px);
+$accent-blue: #38bdf8;
+$text-white: #ffffff;
+$text-muted: rgba(255,255,255,0.75);
+
+.search-bar {
+  max-width: 440px;
+  margin:0px;
+  background: $panel-bg;
+  backdrop-filter: $blur-strong;
+  border-radius: 60px;
+  border: 1px solid rgba(255,255,255,0.22);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+
+  &__input {
+     padding: top 120px;
+    flex: 1;
+    padding: 18px 20px; 
+    background: transparent;
+    border: none;
+    color: $text-white;
+    font-size: 18px;
+    font-weight: 400;
+
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
+
+  &__btn {
+    width: 60px;
+    height: 60px;
+    background: $accent-blue url('../images/завантаження (2).png') center/40px no-repeat;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    margin-right: 0px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
