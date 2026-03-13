@@ -1,12 +1,6 @@
-$panel-bg: rgba(255,255,255,0.14);
-$blur-strong: blur(15px);
-$accent-blue: #38bdf8;
-$text-white: #ffffff;
-$text-muted: rgba(255,255,255,0.75);
-
 .search-bar {
-  max-width: 440px;
-  margin:0px;
+ width: clamp(220px, 50vw, 440px);
+  margin: 20px auto 0;
   background: $panel-bg;
   backdrop-filter: $blur-strong;
   border-radius: 60px;
@@ -17,14 +11,13 @@ $text-muted: rgba(255,255,255,0.75);
   box-shadow: 0 12px 40px rgba(0,0,0,0.2);
 
   &__input {
-     padding: top 120px;
     flex: 1;
-    padding: 18px 20px; 
+   
     background: transparent;
     border: none;
     color: $text-white;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: clamp(12px, 1.4vw, 18px);
+  padding: clamp(10px, 1.5vw, 18px) clamp(12px, 2vw, 20px);
 
     &::placeholder {
       color: $text-muted;
@@ -32,13 +25,12 @@ $text-muted: rgba(255,255,255,0.75);
   }
 
   &__btn {
-    width: 60px;
-    height: 60px;
+   width: clamp(36px, 4vw, 60px);
+  height: clamp(36px, 4vw, 60px);
     background: $accent-blue url('../images/завантаження (2).png') center/40px no-repeat;
     border: none;
     border-radius: 20%;
     cursor: pointer;
-    margin-right: 0px;
     transition: transform 0.2s ease;
 
     &:hover {

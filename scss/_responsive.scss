@@ -1,0 +1,228 @@
+.header__inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.header__nav{
+  display:flex;
+  gap:40px;
+}
+
+.header__link{
+  font-size:20px;
+}
+
+
+.temp-graph{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+
+.forecast-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+
+@include _768{
+
+
+  .header__inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .header__logo{
+    font-size:22px;
+  }
+
+  .header__nav{
+    gap:20px;
+  }
+
+  .header__link{
+    font-size:18px;
+  }
+
+
+  .current-weather__temperature{
+    font-size:140px;
+  }
+
+  .current-weather__temperature::after{
+    width:90px;
+    height:90px;
+    bottom:-10px;
+    right:-10px;
+  }
+
+  .current-weather__city{
+    font-size:26px;
+  }
+
+  .current-weather__feels,
+  .current-weather__condition{
+    font-size:20px;
+  }
+
+  .params-panel{
+    gap:30px;
+    padding:16px 18px;
+    border-radius:40px;
+  }
+
+  .params-panel__icon{
+    width:48px;
+    height:48px;
+  }
+
+  .params-panel__value{
+    font-size:18px;
+  }
+
+  .params-panel__label{
+    font-size:14px;
+  }
+
+  .temp-graph{
+    width:420px;
+    margin:60px auto 0;
+  }
+
+
+  .forecast-layout{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+}
+
+
+@include _600{
+
+
+  .header__nav{
+    gap:12px;
+  }
+
+  .header__link{
+    font-size:16px;
+  }
+
+
+  .current-weather__temperature{
+    font-size:100px;
+  }
+
+  .current-weather__temperature::after{
+    width:70px;
+    height:70px;
+    bottom:-5px;
+    right:-5px;
+  }
+
+  .current-weather__city{
+    font-size:22px;
+  }
+
+  .current-weather__feels,
+  .current-weather__condition{
+    font-size:16px;
+  }
+
+  .params-panel{
+    gap:18px;
+    padding:12px 14px;
+    border-radius:30px;
+  }
+
+  .params-panel__icon{
+    width:36px;
+    height:36px;
+    margin-bottom:8px;
+  }
+
+  .params-panel__value{
+    font-size:15px;
+    margin-bottom:4px;
+  }
+
+  .params-panel__label{
+    font-size:12px;
+  }
+
+  .temp-graph{
+    width:300px;
+    margin:40px auto 0;
+  }
+
+
+  .forecast-day{
+    font-size:14px;
+  }
+
+  .forecast-day img{
+    width:40px;
+  }
+
+}
+
+
+
+@include _480{
+
+
+  .header__nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .header__link{
+    font-size:14px;
+  }
+
+  .current-weather__temperature{
+    font-size:80px;
+  }
+
+  .current-weather__temperature::after{
+    width:55px;
+    height:55px;
+    bottom:0;
+    right:0;
+  }
+
+  .params-panel{
+    gap:14px;
+    padding:10px 12px;
+  }
+
+  .params-panel__icon{
+    width:32px;
+    height:32px;
+  }
+
+  .params-panel__value{
+    font-size:14px;
+  }
+
+  .params-panel__label{
+    font-size:11px;
+  }
+
+  .temp-graph{
+    width:240px;
+  }
+
+  .forecast-day{
+    font-size:12px;
+  }
+
+}
+
+

@@ -1,12 +1,47 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+
+  min-height: calc(100vh - 100px);
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end; 
-  padding-top: 120px; 
-  overflow: hidden;   
+  justify-content: flex-start;
+
+  padding-top: 100px;
+
+  overflow: hidden;
+
+  &__inner {
+    display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap: nowrap;
+  }
+
+  &__logo {
+    font-size: clamp(20px, 4vw, 32px);
+    font-weight: 800;
+    color: $accent-blue;
+    white-space: nowrap;
+  }
+
+  &__nav {
+  display:flex;
+  gap: clamp(6px, 2vw, 48px);
+  }
+
+  &__link {
+    color: $text-white;
+    text-decoration: none;
+    font-size: clamp(12px, 2vw, 17px);
+    font-weight: 500;
+    white-space: nowrap;
+
+    &:hover {
+      color: $accent-blue;
+    }
+  }
 }
 
 .hero__bg-gradient {
@@ -35,7 +70,7 @@
 }
 
 .current-weather__temperature {
-  font-size: 200px;
+ font-size: clamp(80px, 15vw, 200px);
   position: relative;
   display: inline-block;
   color: $temp-dark;
@@ -58,14 +93,14 @@
   align-items: center;
   gap: 5px;         
   margin-top: 2px; 
-  padding-top: 20px;
+ padding-top: clamp(5px, 2vw, 20px);
   padding-bottom: 30px;
   line-height: 1.6;   
 }
 
 .current-weather__city {
   font-weight: 700;
-  font-size: 30px;
+ font-size: clamp(20px, 3vw, 30px);
   line-height: 1.8;
 }
 
@@ -82,44 +117,44 @@
   backdrop-filter: $blur-strong;
   border-radius: 60px;
   border: 3px solid rgba(8, 47, 114, 0.914);
-  padding: 20px 25px;
   display: inline-flex;
-  gap: 50px;
+  gap: clamp(15px, 4vw, 50px);
+  padding: clamp(10px, 2vw, 20px) clamp(12px, 3vw, 25px);
   box-shadow: 0 28px 80px rgba(0,0,0,0.3);
 }
 
 
 .params-panel__item:nth-child(1) .params-panel__icon {
   background: url('../images/image-removebg-preview (6).png') center/contain no-repeat;
-  width: 60px;
-  height: 60px;
+   width: clamp(32px, 5vw, 60px);
+  height: clamp(32px, 5vw, 60px);
 }
 
 .params-panel__item:nth-child(2) .params-panel__icon {
   background: url('../images/image-removebg-preview (7).png') center/contain no-repeat;
-  width: 60px;
-  height: 60px;
+  width: clamp(32px, 5vw, 60px);
+  height: clamp(32px, 5vw, 60px);
   position: relative; 
   top: -5px;          
 }
 
 .params-panel__item:nth-child(3) .params-panel__icon {
   background: url('../images/image-removebg-preview (8).png') center/contain no-repeat;
-  width: 60px;
-  height: 60px;
+   width: clamp(32px, 5vw, 60px);
+  height: clamp(32px, 5vw, 60px);
 }
 
 .params-panel__icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 18px;
+  width: clamp(32px, 5vw, 60px);
+  height: clamp(32px, 5vw, 60px);
+  margin-bottom: clamp(6px, 1vw, 18px);
   fill: $text-icon;
   opacity: 0.95;
 }
 
 
 .params-panel__value {
-  font-size: 20px;
+  font-size: clamp(14px, 1.4vw, 20px);
   font-weight: 700;
   display: block;
   color: #1C2D99;
@@ -128,7 +163,7 @@
 
 
 .params-panel__label {
-  font-size: 15px;
+  font-size: clamp(10px, 1.2vw, 15px);
   text-align: center;
   color: #1C2D99;
   opacity: 0.8;
@@ -137,7 +172,7 @@
 }
 .temp-graph {
   margin-top: 60px;
-  width: 520px;
+ width: clamp(220px, 60vw, 520px);
 }
 
 
@@ -214,15 +249,12 @@
 }
 
 
-.temp-graph__hours {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 8px;
-  font-size: 13px;
-  color: #1C2D99;
-  opacity: 0.85;
-
-  span.active {
-    font-weight: 700;
-  }
+.temp-graph__hours{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  max-width:520px;
+  margin-top:10px;
+  color:white;
+  font-size: clamp(9px, 1.2vw, 14px);
 }
