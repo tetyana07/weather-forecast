@@ -258,3 +258,62 @@
   color:white;
   font-size: clamp(9px, 1.2vw, 14px);
 }
+
+body.dark {
+  background: #0a0e1a;
+  color: #e0e7ff;
+}
+
+/* Hero в темній темі */
+body.dark .hero__bg-gradient {
+  background: linear-gradient(to bottom, #0f172a, #1e2937);
+}
+
+body.dark .hero__clouds {
+  opacity: 0.28;
+  filter: blur(10px) brightness(0.6);
+}
+
+
+body.dark .header {
+  background: rgba(15, 23, 42, 0.97);
+  backdrop-filter: blur(16px);
+}
+
+body.dark .header__logo {
+  color: #a5b4fc;
+}
+
+body.dark .header__link {
+  color: #e0e7ff;
+}
+
+body.dark .header__link:hover {
+  color: #c0d4ff;
+}
+
+
+body.dark .params-panel {
+  background: rgba(30, 41, 59, 0.75);
+  border: 3px solid rgba(100, 150, 255, 0.35);
+  backdrop-filter: blur(22px);
+}
+
+body.dark .params-panel__value {
+  color: #a5b4fc;
+}
+
+body.dark .params-panel__label {
+  color: #94a3c0;
+}
+
+
+body.dark .current-weather__temperature {
+  color: #c0d4ff;
+}
+
+body.dark .current-weather__city,
+body.dark .current-weather__feels,
+body.dark .current-weather__condition {
+  color: #e0e7ff;
+}

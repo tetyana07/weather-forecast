@@ -79,3 +79,63 @@ font-size: clamp(12px, 1.3vw, 18px);
 .hour-row img {
   width: 50px;
 }
+.forecast-page {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, $gradient-end, $gradient-start);
+}
+
+/* Фон з хмарами */
+.forecast-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../images/image-removebg-preview (5).png') center/cover no-repeat;
+  filter: blur(8px);
+  opacity: 0.52;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.forecast-day,
+.hour-row {
+  position: relative;
+  z-index: 2;
+  border-radius: 40px;
+  padding: 14px 20px;
+  margin-bottom: 14px;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+}
+
+
+.forecast-day,
+.hour-row {
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+
+body.dark .forecast-day,
+body.dark .hour-row {
+  background: rgba(30, 41, 59, 0.65);    
+  border: 1px solid rgba(148, 163, 192, 0.25);
+  backdrop-filter: blur(22px);
+}
+
+
+.forecast-day:hover,
+.forecast-day.open,
+.hour-row:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.35) ;
+}
+
+body.dark .forecast-day:hover,
+body.dark .forecast-day.open,
+body.dark .hour-row:hover {
+  background: rgba(100, 140, 255, 0.22) ;
+  border-color: rgba(165, 180, 252, 0.4);
+}

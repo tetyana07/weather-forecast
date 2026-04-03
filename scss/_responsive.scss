@@ -29,26 +29,9 @@
 
 
 @include _768{
-
-
-  .header__inner{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-
-  .header__logo{
-    font-size:22px;
-  }
-
-  .header__nav{
-    gap:20px;
-  }
-
-  .header__link{
-    font-size:18px;
-  }
-
+  .header__burger {
+  display: flex;
+}
 
   .current-weather__temperature{
     font-size:140px;

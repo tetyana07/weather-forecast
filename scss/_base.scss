@@ -16,3 +16,90 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+body.dark {
+    background: #0a0c18;
+    color: #e0e7ff;
+
+    /* Header */
+    .header {
+        background: rgba(10, 12, 24, 0.96);
+        backdrop-filter: blur(16px);
+    }
+
+    
+    .header__nav {
+        background: rgba(15, 23, 42, 0.88);
+        backdrop-filter: blur(28px);
+        -webkit-backdrop-filter: blur(28px);
+        border-right: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+   
+    .header__link {
+        color: #e0f2fe;
+    }
+
+    .header__link:hover {
+        color: #67e8f9;
+        background: rgba(103, 232, 249, 0.15);
+    }
+
+    
+    .hero__bg-gradient {
+        background: linear-gradient(to bottom, #0a0c18, #1a253f);
+    }
+
+    .hero__clouds {
+        opacity: 0.22;
+        filter: brightness(0.55);
+    }
+
+    .search-bar {
+        background: rgba(255,255,255,0.07);
+        border: 1px solid rgba(255,255,255,0.12);
+        
+        &__input {
+            color: #e0e7ff;
+            &::placeholder { color: #94a3c0; }
+        }
+    }
+
+    .current-weather__temperature {
+        color: #c0d4ff;
+    }
+
+    .current-weather__city,
+    .current-weather__feels,
+    .current-weather__condition {
+        color: #e0e7ff;
+    }
+
+    .params-panel {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(100, 150, 255, 0.18);
+        
+        &__value { color: #a5b4fc; }
+        &__label { color: #94a3c0; }
+    }
+
+    .forecast-page {
+        background: linear-gradient(to bottom, #1a253f, #0a0c18);
+    }
+
+    .forecast-day,
+    .hour-row {
+        background: rgba(255,255,255,0.07);
+        color: #e0e7ff;
+        
+        &:hover,
+        &.open {
+            background: rgba(103, 232, 249, 0.12);
+            transform: scale(1.02);
+        }
+    }
+
+    .forecast-title {
+        color: #c0d4ff;
+    }
+}
